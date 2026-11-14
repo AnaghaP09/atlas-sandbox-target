@@ -24,3 +24,7 @@ from any other project.
 ## About this project
 
 This repository is part of the ATLAS team capstone project by Swetha, Bhuneshwari and Anagha.
+
+## Licence
+
+MIT (see LICENSE).
