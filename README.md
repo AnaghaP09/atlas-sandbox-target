@@ -1,25 +1,28 @@
 # ATLAS sandbox target
 
-This repository is the demonstration target for [ATLAS](https://github.com/AnaghaP09/atlas). It
-plays the part of a customer's code base: ATLAS proposes small, bounded fixes here so that its
-execution path can be shown end to end without touching any real project.
+This repository is the demo target for [ATLAS](https://github.com/AnaghaP09/atlas). It stands in
+for an organisation's own code. ATLAS proposes small fixes here. This lets the demo show the
+whole code-change process without touching a real project.
 
 ## How changes arrive
 
-1. ATLAS investigates a failure and recommends delegating a bounded fix to a coding agent.
-2. An engineering manager approves preparing the task.
-3. The coding agent writes the change inside a container with no network access and no secrets.
-   The change is built and tested there.
-4. The engineering manager approves the exact diff.
-5. ATLAS opens a **draft** pull request here. CI runs the tests in the same isolation, and a
-   person judges whether the fix is correct.
+1. ATLAS investigates a failure. It suggests giving a small, well-defined fix to a coding agent.
+   A coding agent is a program that writes code changes.
+2. An engineering manager approves the preparation of the change.
+3. The coding agent writes the change inside a container. A container is an isolated space on
+   the computer. This one has no network access and no secrets. ATLAS builds and tests the
+   change inside the container.
+4. The engineering manager approves the exact change.
+5. ATLAS opens a **draft** pull request in this repository. A pull request is a proposed change
+   that a person reviews. The automated tests run in the same kind of container. A person
+   decides whether the fix is correct.
 
-Nothing is merged automatically. Every pull request stays a draft until a person decides.
+Nothing merges automatically. Each pull request stays a draft until a person decides.
 
 ## Contents
 
-The Go package and its tests will be added here. They are written for the demo and are not taken
-from any other project.
+The Go package and its tests will be added here. The team wrote them for the demo. They do not
+come from any other project.
 
 ## About this project
 
