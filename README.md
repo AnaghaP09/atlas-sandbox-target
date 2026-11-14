@@ -26,7 +26,7 @@ come from any other project.
 
 ## About this project
 
-This repository is part of the ATLAS team capstone project by Swetha, Bhuneshwari and Anagha.
+This repository is part of ATLAS, which a small team built as a capstone project.
 
 ## Licence
 
