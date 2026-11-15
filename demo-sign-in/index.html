@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Demo Corp sign-in (demo only)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="demo-banner" role="note">Demo only. This page does not sign anyone in and sends nothing.</div>
+
+  <main class="layout">
+    <section class="brand" aria-label="Demo Corp">
+      <div class="brand-inner">
+        <div class="logo">
+          <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+            <rect x="4" y="4" width="40" height="40" rx="12" fill="currentColor" opacity="0.18"/>
+            <path d="M15 33V15h8.5c5.5 0 9.5 3.7 9.5 9s-4 9-9.5 9H15zm5-4.5h3.3c2.9 0 4.7-1.8 4.7-4.5s-1.8-4.5-4.7-4.5H20v9z" fill="currentColor"/>
+          </svg>
+          <span>Demo Corp</span>
+        </div>
+        <h1>One account for every tool at Demo Corp.</h1>
+        <p class="lead">Sign in once with your company account. Your role decides what each tool shows you.</p>
+        <ul class="apps" aria-label="Tools that use this sign-in">
+          <li><span class="dot dot-a"></span>ATLAS release planning</li>
+          <li><span class="dot dot-b"></span>Issue tracker</li>
+          <li><span class="dot dot-c"></span>Build and test pipeline</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="signin-title">
+      <div class="card">
+        <h2 id="signin-title">Sign in</h2>
+        <p class="muted">Continue to <strong>ATLAS</strong></p>
+
+        <label class="field">
+          <span>Work email</span>
+          <input id="email" type="email" placeholder="name@democorp.example" autocomplete="off" spellcheck="false">
+        </label>
+
+        <button class="btn primary" type="button" data-demo>Continue</button>
+
+        <div class="divider"><span>or</span></div>
+
+        <button class="btn secondary" type="button" data-demo>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 1 5 5v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v3h6V7a3 3 0 0 0-3-3z"/></svg>
+          Use a security key
+        </button>
+        <button class="btn secondary" type="button" data-demo>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h10V4H7zm5 13a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+          Approve on my phone
+        </button>
+
+        <p id="demo-note" class="note" role="status" hidden>Demo only. In a real install, this step hands you to your company's sign-in service, and ATLAS opens with the role your company gave you.</p>
+
+        <p class="fine">Trouble signing in? Contact the Demo Corp help desk.</p>
+      </div>
+      <p class="footer">Demo Corp is a made-up company for this demo.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
