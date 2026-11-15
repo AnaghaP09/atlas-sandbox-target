@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build, vet and test in an isolated container
+        run: |
+          docker run --rm \
+            --network none --read-only --cap-drop ALL \
+            --security-opt no-new-privileges --pids-limit 256 --memory 1g \
+            --user 65534:65534 \
+            --tmpfs /work:rw,exec,size=512m \
+            -e HOME=/work -e GOCACHE=/work/cache -e GOPATH=/work/gopath \
+            -e GOTMPDIR=/work/tmp -e TMPDIR=/work/tmp -e CGO_ENABLED=0 \
+            -e GOFLAGS=-mod=mod -e GOPROXY=off -e GOTOOLCHAIN=local \
+            -v "$PWD":/src:ro \
+            golang@sha256:ea30e25680a5470bac02b08bb0e0a735fb75bd0ab7d431b9b95ee0abef362586 \
+            sh -ec 'mkdir -p /work/tmp && cp -r /src /work/repo && cd /work/repo && cp .atlas/behaviour/*_test.go netaddr/ && test -z "$(gofmt -l .)" && go build ./... && go vet ./... && go test ./...'
