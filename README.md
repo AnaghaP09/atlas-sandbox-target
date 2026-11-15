@@ -4,6 +4,15 @@ This repository is the demo target for [ATLAS](https://github.com/AnaghaP09/atla
 for an organisation's own code. ATLAS proposes small fixes here. This lets the demo show the
 whole code-change process without touching a real project.
 
+## Status
+
+This repository is empty apart from this page and the licence. Two things are not here yet:
+
+- **The first content.** A small Go package, its tests and its automated test setup will be
+  added. They are sample code written for the demo. They do not come from any other project.
+- **Draft pull requests.** ATLAS does not open pull requests here yet. That step is not
+  connected.
+
 ## How changes arrive
 
 1. ATLAS investigates a failure. It suggests giving a small, well-defined fix to a coding agent.
@@ -17,16 +26,13 @@ whole code-change process without touching a real project.
    that a person reviews. The automated tests run in the same kind of container. A person
    decides whether the fix is correct.
 
-Nothing merges automatically. Each pull request stays a draft until a person decides.
+Steps 1 to 4 work today. Step 5 is the part that is not connected.
 
-## Contents
-
-The Go package and its tests will be added here. The team wrote them for the demo. They do not
-come from any other project.
+Nothing will merge automatically. Each pull request stays a draft until a person decides.
 
 ## About this project
 
-This repository is part of ATLAS, which a small team built as a capstone project.
+This repository is part of ATLAS. ATLAS was built as a capstone project.
 
 ## Licence
 
