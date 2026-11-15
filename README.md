@@ -6,12 +6,12 @@ whole code-change process without touching a real project.
 
 ## Status
 
-This repository is empty apart from this page and the licence. Two things are not here yet:
+This repository holds a small Go package, `netaddr`, with a known bug: it joins IPv6 addresses
+and ports in the wrong form. The package is sample code written for the demo. It does not come
+from any other project.
 
-- **The first content.** A small Go package, its tests and its automated test setup will be
-  added. They are sample code written for the demo. They do not come from any other project.
-- **Draft pull requests.** ATLAS does not open pull requests here yet. That step is not
-  connected.
+The behaviour test for the bug fails on purpose, so the automated test run shows red until a fix
+lands. ATLAS does not open pull requests here yet. That step is not connected.
 
 ## How changes arrive
 
